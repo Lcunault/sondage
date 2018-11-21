@@ -1,0 +1,147 @@
+
+{
+    user-select: none;
+}
+
+body, html
+{
+    height: 100%;
+    min-height: 100%;
+}
+
+body
+{
+    margin: 0;
+    font-family: 'Encode Sans Expanded', sans-serif;
+    background-color: #8898ff;
+}
+
+#app-cover
+{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    width: 380px;
+    height: 200px;
+    margin: -100px auto;
+}
+
+#app
+{
+    position: relative;
+    height: 140px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+#label-1
+{
+    color: #5f6065;
+    font-size: 23px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+#label-2
+{
+    color: #aba9a9;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.option
+{
+    position: relative;
+    font-size: 16px;
+    margin-bottom: 14px;
+    cursor: pointer;
+    z-index: 0;
+}
+
+.circle
+{
+    left: 0;
+    width: 20px;
+    background-color: #eaecff;
+}
+
+.circle:before
+{
+    content: '';
+    width: 60px;
+    left: -90px;
+    background-color:  #8898ff;
+    transition: 0.3s ease all;
+}
+
+.circle, .circle:before
+{
+    position: absolute;
+    top: 0;
+    height: 20px;
+    border-radius: 100px;
+}
+
+.option.selected .circle:before, .option .circle.move-right:before, .option .circle.width-exact:before
+{
+    left: 0;
+    width: 20px;
+}
+
+.option.selected .circle.increase-width:before, .option .circle.move-right:before
+{
+    left: -40px;
+    width: 60px;
+}
+
+.option.selected .circle.width-zero:before
+{
+    width: 0;
+}
+
+.option-text
+{
+    color: #5f6065;
+    padding-left: 34px;
+}
+
+#bg
+{
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    width: 130px;
+    height: 150px;
+    background-size: 130px;
+    background-repeat: no-repeat;
+    background-position: 100%;
+    background-image: url(http://k003.kiwi6.com/hotlink/o0t7mldy36/batman.png);
+    opacity: 1;
+    transform: scale(1);
+    transition: 0.6s cubic-bezier(0.18, 0.89, 0.29, 1.05) all;
+    z-index: 1;
+
+}
+
+#bg.superman
+{
+    background-image: url(http://k003.kiwi6.com/hotlink/12adunj55b/superman.png);
+}
+
+#bg.op
+{
+    opacity: 0;
+}
+
+#bg.nobg
+{
+    background-image: none;
+}
+
+#bg.big
+{
+    transform: scale(3);
+}
